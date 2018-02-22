@@ -10,9 +10,9 @@ The goals / steps of this project are the following:
 
 
 [//]: # (Image References)
-
 [image]: ./test_images/solidWhiteCurve.jpg "Original"
 [image1]: ./GrayScale/solidWhiteCurve.jpg "Grayscale"
+
 ---
 
 ### Reflection
