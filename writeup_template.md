@@ -1,8 +1,5 @@
 # **Finding Lane Lines on the Road** 
-## Writeup Template
----
-
-**Finding Lane Lines on the Road**
+## Writeup 
 
 The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
@@ -10,8 +7,9 @@ The goals / steps of this project are the following:
 
 
 [//]: # (Image References)
-[image]: ./test_images/solidWhiteCurve.jpg "Original"
+[image0]: ./test_images/solidWhiteCurve.jpg "Original"
 [image1]: ./GrayScale/solidWhiteCurve.jpg "Grayscale"
+[image2]: ./GaussianSmoothing/solidWhiteCurve.jpg "GaussianSmoothing"
 
 ---
 
@@ -19,10 +17,19 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 5 steps. First, I converted the original images to grayscale, 
-![alt text][image] -> ![alt text][image1]
+My pipeline consisted of 5 steps. 
+First, I converted the original images to **grayscale**, 
 
-then I .... 
+
+**edges = cv2.Canny(gray, low_threshold, high_threshold)**
+
+![alt text][image0]  ![alt text][image1]
+
+then I applied **Guassian Smoothing** to suppress noise and spurious gradients in the grayscale image using a kernel size of 5. 
+![alt text][image2]
+
+After that, to find the edges of lanes in the image, I used the OpenCV Canny function. 
+
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
 
